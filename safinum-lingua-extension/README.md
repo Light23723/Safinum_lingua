@@ -1,8 +1,8 @@
-# Safinum Lingua — extension navigateur (MVP 0.2)
+# Safinum Lingua — extension navigateur 
 
 Prototype d'extension Chromium (Google Chrome et Microsoft Edge) pour l'environnement `https://safinum.cm/hackathon-test`.
 
-## Nouveauté de la version 0.2
+## 
 
 Le fichier `glossaire.json` est inclus directement dans le dossier de l'extension. Il est chargé automatiquement par le script de contenu et par la fenêtre de l'extension : aucune importation manuelle n'est nécessaire après installation.
 
@@ -12,12 +12,11 @@ Le glossaire embarqué contient les 11 entrées du fichier fourni par l'équipe.
 
 1. Décompresser `safinum-lingua-extension-v0.2.zip`.
 2. Ouvrir `edge://extensions`.
-3. Si la version 0.1 est déjà chargée, cliquer sur **Recharger** dans sa carte après avoir remplacé le dossier par le nouveau dossier, ou retirer l'ancienne version puis charger le nouveau dossier.
-4. Activer le **Mode développeur** si nécessaire.
-5. Cliquer sur **Charger l'extension non empaquetée**.
-6. Sélectionner le dossier `safinum-lingua-extension` qui contient `manifest.json`.
-7. Ouvrir ou actualiser `https://safinum.cm/hackathon-test`.
-8. Cliquer sur l'icône Safinum Lingua : le glossaire embarqué doit apparaître dans « Glossaire actif ».
+3. Activer le **Mode développeur** si nécessaire.
+4. Cliquer sur **Charger l'extension non empaquetée**.
+5. Sélectionner le dossier `safinum-lingua-extension` qui contient `manifest.json`.
+6. Ouvrir ou actualiser `https://safinum.cm/hackathon-test`.
+7. Cliquer sur l'icône Safinum Lingua : le glossaire embarqué doit apparaître dans « Glossaire actif ».
 
 ## Ajouter des traductions
 
