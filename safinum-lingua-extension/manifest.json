@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Safinum Lingua — Français / Duala",
+  "short_name": "Safinum Lingua",
+  "version": "0.2.0",
+  "description": "Prototype d’accessibilité financière en Duala avec glossaire local embarqué.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://safinum.cm/hackathon-test*",
+    "https://www.safinum.cm/hackathon-test*"
+  ],
+  "action": {
+    "default_title": "Safinum Lingua",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://safinum.cm/hackathon-test*",
+        "https://www.safinum.cm/hackathon-test*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "glossaire.json"
+      ],
+      "matches": [
+        "https://safinum.cm/*",
+        "https://www.safinum.cm/*"
+      ]
+    }
+  ]
+}

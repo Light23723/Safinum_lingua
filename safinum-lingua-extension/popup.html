@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Safinum Lingua</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">SL</div>
+      <div>
+        <h1>Safinum Lingua</h1>
+        <p>Accessibilité financière en Duala</p>
+      </div>
+      <span class="version">MVP 0.1</span>
+    </header>
+
+    <section class="status-card">
+      <div class="status-head">
+        <div>
+          <span class="eyebrow">LANGUE CIBLE</span>
+          <strong>Duala</strong>
+        </div>
+        <label class="switch" title="Activer ou désactiver les traductions">
+          <input id="enabled" type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <p id="pageMessage" class="muted">Vérification de la page Safinum…</p>
+      <div class="stats">
+        <div><strong id="translatedCount">0</strong><span>élément(s) traduit(s)</span></div>
+        <div><strong id="unknownCount">0</strong><span>texte(s) à compléter</span></div>
+      </div>
+      <button id="rescan" class="secondary full">Analyser à nouveau la page</button>
+    </section>
+
+    <section class="editor">
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">GLOSSAIRE COLLABORATIF</span>
+          <h2>Ajouter une traduction</h2>
+        </div>
+        <span class="tag">Local</span>
+      </div>
+      <p class="hint">Choisis un texte détecté ou saisis une expression. La traduction sera appliquée automatiquement à la page, y compris lorsqu'un nouvel élément apparaît.</p>
+
+      <label for="unknownSelect">Textes détectés sur la page</label>
+      <select id="unknownSelect">
+        <option value="">— Choisir un texte —</option>
+      </select>
+
+      <label for="sourceText">Texte français</label>
+      <input id="sourceText" type="text" maxlength="160" placeholder="Ex. : Bonjour">
+
+      <label for="targetText">Traduction en Duala</label>
+      <input id="targetText" type="text" maxlength="160" placeholder="Saisir une traduction validée">
+      <p class="micro-note">Évite d'ajouter des montants, des numéros, des devises ou des références au glossaire.</p>
+
+      <button id="saveTranslation" class="primary full">Enregistrer la traduction</button>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="glossary-section">
+      <div class="section-title">
+        <h2>Glossaire actif</h2>
+        <span id="glossaryCount" class="tag">0 entrée</span>
+      </div>
+      <div id="glossaryList" class="glossary-list"></div>
+      <div class="tools">
+        <button id="exportGlossary" class="secondary">Exporter JSON</button>
+        <label class="secondary import-label" for="importFile">Importer JSON</label>
+        <input id="importFile" type="file" accept="application/json,.json" hidden>
+      </div>
+    </section>
+
+    <footer>
+      <strong>Mode sécurité activé</strong>
+      <p>Glossaire Duala embarqué (11 entrées). Les nœuds contenant des chiffres sont laissés intacts. Aucun texte n'est envoyé à un serveur.</p>
+      <p class="disclaimer">Les traductions Duala doivent être validées par des locuteurs compétents avant la démonstration officielle.</p>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
