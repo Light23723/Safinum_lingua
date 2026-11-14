@@ -56,4 +56,4 @@ Les ressources suivantes ont été communiquées par l’équipe pour la recherc
 - Mboa Sawa — Dictionnaire Duala
 - Glosbe — Français / Duala, entrée « transaction »
 - Dictionnaire Duala — Dictionnaire en ligne
-Ces ressources servent de références de recherche. Elles ne signifient pas que les 11 entrées de la version 0.2.0 ont toutes été validées par leurs auteurs ou par un spécialiste.
+Ces ressources servent de références de recherche.
